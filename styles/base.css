@@ -1,0 +1,158 @@
+/* ==========================================================================
+   Base CSS for WDD 131 – Dynamic Web Fundamentals
+   Author: Daniel Mukonda
+   ========================================================================== */
+
+/* -------------------------------
+   Google Fonts
+--------------------------------- */
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Primary font from Google Fonts */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* -------------------------------
+   Header and Course Title
+--------------------------------- */
+header {
+    background-color: #004466;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+#course-title {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+    /* Secondary font from Google Fonts */
+    margin-bottom: 0.5rem;
+}
+
+/* -------------------------------
+   Navigation with Flexbox
+--------------------------------- */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #006699;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* -------------------------------
+   Main Layout with CSS Grid
+--------------------------------- */
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+/* -------------------------------
+   Card Styling
+--------------------------------- */
+.card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* -------------------------------
+   Aside Styling (if used)
+--------------------------------- */
+aside {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #e6f2f7;
+    color: #222;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+aside h2 {
+    font-family: 'Merriweather', serif;
+    margin-bottom: 1rem;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+aside p {
+    padding: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* -------------------------------
+   Footer Styling
+--------------------------------- */
+footer {
+    background-color: #004466;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 3px solid #006699;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* -------------------------------
+   Responsive Adjustments
+--------------------------------- */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+}

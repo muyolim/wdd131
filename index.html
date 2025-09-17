@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Dynamic Web Fundamentals – Daniel Mukonda</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Daniel Mukonda's personal homepage featuring profile information, goals, scripture links, final project preview, and course resources.">
+    <meta name="author" content="Daniel Mukonda">
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/getdates.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+      <nav aria-label="Main navigation">
+        <a href="https://www.linkedin.com/in/daniel-mukonda/" target="_blank">LinkedIn Profile</a>
+        <a href="https://byupw.instructure.com/">Canvas Course</a>
+        <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture Study Link</a>
+        <a href="#">Final Project</a>
+        <a href="#">About Me</a>
+        <a href="#">My Goals</a>
+        <a href="#">Resources</a>
+      </nav>
+    </header>
+
+    <main role="main">
+      <h1>Daniel Mukonda</h1>
+
+      <section class="card">
+        <h2>About Me</h2>
+        <figure>
+          <img src="images/profile.jpg" alt="Daniel Mukonda smiling, professional profile photo" width="200">
+          <figcaption>Profile photo of Daniel Mukonda</figcaption>
+        </figure>
+        <p>I’m from Johannesburg, South Africa. I’m passionate about empowering underserved communities through education and mentorship. I coach and inspire young people to lead with purpose and build strong values.</p>
+      </section>
+
+      <section class="card">
+        <h2>My Goals</h2>
+        <figure>
+          <img src="images/goals.jpg" alt="Illustration showing a target and steps to reach goals" width="200">
+          <figcaption>Visual representation of goals</figcaption>
+        </figure>
+        <p>In WDD 131, I aim to master dynamic web fundamentals, improve my JavaScript skills, and build a polished final project that reflects my growth and creativity.</p>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <p>©<span id="currentyear"></span> Daniel Mukonda – South Africa</p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>
