@@ -1,4 +1,4 @@
-/* General */
+/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -16,12 +16,23 @@ header {
 
 header h1 {
     font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+}
+
+.hamburger {
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    display: none; /* hidden by default, shown via JS */
+    margin: 0;
+    display: none; /* hidden by default on mobile */
+    flex-direction: column;
 }
 
 nav li {
@@ -38,25 +49,16 @@ nav a:hover {
     color: #ffd700;
 }
 
-/* Hamburger button */
-.hamburger {
-    font-size: 1.5em;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-/* Main gallery */
+/* Main Gallery */
 main {
-    max-width: 800px;
+    max-width: 900px;
     margin: 1em auto;
     padding: 0 1em;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: 1fr; /* single column for mobile */
+    grid-template-columns: 1fr;
     gap: 1em;
 }
 
@@ -69,9 +71,15 @@ figcaption {
     padding: 0.5em 0;
 }
 
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
 /* Footer */
 footer {
     text-align: center;
     padding: 1em 0;
     background-color: #eee;
 }
+

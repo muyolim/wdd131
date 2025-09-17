@@ -1,38 +1,86 @@
-<div class="gallery">
-    <figure>
-        <img src="images/johannesburg-south-africa-temple.jpg" alt="Johannesburg South Africa Temple">
-        <figcaption>Johannesburg South Africa Temple</figcaption>
-    </figure>
-    <figure>
-        <img src="images/durban-south-africa-temple.jpg" alt="Durban South Africa Temple">
-        <figcaption>Durban South Africa Temple</figcaption>
-    </figure>
-    <figure>
-        <img src="images/lubumbashi-democratic-republic-of-the-congo-temple.jpg" alt="Lubumbashi Democratic Republic of the Congo Temple">
-        <figcaption>Lubumbashi Democratic Republic of the Congo Temple</figcaption>
-    </figure>
-    <figure>
-        <img src="images/nairobi-kenya-temple.jpg" alt="Nairobi Kenya Temple">
-        <figcaption>Nairobi Kenya Temple</figcaption>
-    </figure>
-    <figure>
-        <img src="images/lagos-nigeria-temple.jpg" alt="Lagos Nigeria Temple">
-        <figcaption>Lagos Nigeria Temple</figcaption>
-    </figure>
-    <figure>
-        <img src="images/aba-nigeria.jpg" alt="Aba Nigeria Temple">
-        <figcaption>Aba Nigeria Temple</figcaption>
-    </figure>
-    <figure>
-        <img src="images/antananarivo-madagascar-temple.jpg" alt="Antananarivo Madagascar Temple">
-        <figcaption>Antananarivo Madagascar Temple</figcaption>
-    </figure>
-    <figure>
-        <img src="images/accra-ghana-temple.jpg" alt="Accra Ghana Temple">
-        <figcaption>Accra Ghana Temple</figcaption>
-    </figure>
-    <figure>
-        <img src="images/abidjan-ivory-coast-temple.jpg" alt="Abidjan Ivory Coast Temple">
-        <figcaption>Abidjan Ivory Coast Temple</figcaption>
-    </figure>
-</div>
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album | BYUI WDD131 Project</title>
+    <meta name="description" content="A responsive Temple Album page created for BYUI WDD131 project with images of temples around the world.">
+    <meta name="author" content="Daniel Mukonda">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <!-- JS -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button class="hamburger">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Our Temple Collection</h2>
+        <div class="gallery">
+            <figure>
+                <img src="images/johannesburg-south-africa-temple.jpg" alt="Johannesburg South Africa Temple">
+                <figcaption>Johannesburg South Africa Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/durban-south-africa-temple.jpg" alt="Durban South Africa Temple">
+                <figcaption>Durban South Africa Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/lubumbashi-democratic-republic-of-the-congo-temple.jpg" alt="Lubumbashi Democratic Republic of the Congo Temple">
+                <figcaption>Lubumbashi Democratic Republic of the Congo Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/nairobi-kenya-temple.jpg" alt="Nairobi Kenya Temple">
+                <figcaption>Nairobi Kenya Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/lagos-nigeria-temple.jpg" alt="Lagos Nigeria Temple">
+                <figcaption>Lagos Nigeria Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/aba-nigeria.jpg" alt="Aba Nigeria Temple">
+                <figcaption>Aba Nigeria Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/antananarivo-madagascar-temple.jpg" alt="Antananarivo Madagascar Temple">
+                <figcaption>Antananarivo Madagascar Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/accra-ghana-temple.jpg" alt="Accra Ghana Temple">
+                <figcaption>Accra Ghana Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/abidjan-ivory-coast-temple.jpg" alt="Abidjan Ivory Coast Temple">
+                <figcaption>Abidjan Ivory Coast Temple</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Temple Album | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
