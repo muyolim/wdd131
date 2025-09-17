@@ -1,0 +1,77 @@
+/* General */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004080;
+    color: white;
+    padding: 0.5em 1em;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: none; /* hidden by default, shown via JS */
+}
+
+nav li {
+    margin: 0.5em 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* Hamburger button */
+.hamburger {
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Main gallery */
+main {
+    max-width: 800px;
+    margin: 1em auto;
+    padding: 0 1em;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr; /* single column for mobile */
+    gap: 1em;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    text-align: center;
+    padding: 0.5em 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #eee;
+}
