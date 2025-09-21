@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
   <meta charset="UTF-8">
@@ -16,62 +16,57 @@
   <header>
     <h1>Discover Zambia</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="place.html">Zambia</a>
+      <ul>
+        <li><a href="#">Culture</a></li>
+        <li><a href="#">Weather</a></li>
+        <li><a href="#">Landmarks</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section class="hero">
       <picture>
-        <source srcset="images/zambia-hero-large.webp" media="(min-width: 1024px)">
-        <source srcset="images/zambia-hero-medium.webp" media="(min-width: 600px)">
-        <img src="images/zambia-hero-small.webp" alt="Victoria Falls in Zambia" />
+        <source srcset="images/zambia-hero-small.webp" media="(max-width: 600px)">
+        <source srcset="images/zambia-hero-large.webp" media="(min-width: 601px)">
+        <img src="images/zambia-hero-large.webp" alt="Zambia scenic hero image">
       </picture>
+    </section>
 
-      <!-- Data overlay -->
-      <div class="data">
-        <h2>Data</h2>
-        <p><strong>Area:</strong> 752,618 sq km</p>
-        <p><strong>Population:</strong> 19,600,000</p>
-        <p><strong>Capital:</strong> Lusaka</p>
-        <p><strong>Languages:</strong> English, Bemba, Nyanja, Tonga, Lozi</p>
-        <p><strong>Currency:</strong> Zambian Kwacha (ZMW)</p>
-        <p><strong>Time Zone:</strong> UTC+2</p>
-        <p><strong>Calling Code:</strong> +260</p>
-        <p><strong>Internet TLD:</strong> .zm</p>
-      </div>
+    <!-- About Section -->
+    <section class="about">
+      <h2>About Zambia</h2>
+      <img src="images/zambia-about.webp" alt="Zambia landscape">
+      <p>
+        Zambia is a landlocked country in Southern Africa, known for its natural beauty, diverse wildlife,
+        and the majestic Victoria Falls. It offers a mix of modern cities and rural traditions, making it
+        a fascinating destination for travelers and learners alike.
+      </p>
+    </section>
 
-      <!-- Weather overlay -->
-      <div class="weather">
-        <h2>Weather</h2>
-        <img src="images/weather.svg" alt="Weather icon" />
-        <p>Temperature: <span id="temperature"></span></p>
-        <p>Conditions: Sunny</p>
-        <p>Wind: <span id="windspeed"></span></p>
-        <p>Wind Chill: <span id="windchill"></span></p>
+    <!-- Weather Section -->
+    <section class="weather">
+      <h2>Current Weather</h2>
+      <div class="weather-info">
+        <img src="images/weather.svg" alt="Weather icon">
+        <p id="weather-data">Loading weather...</p>
       </div>
     </section>
 
-    <!-- About -->
-    <section class="about">
-      <h2>About Zambia</h2>
-      <p>
-        Zambia "nicknamed as the real African" is the home of the mighty Victoria Falls, one of the Seven Natural
-        Wonders of the World. it holds this title for its unspoiled natural beauty, abundant wildlife, and diverse
-        scenery, offering a chance to experience an untouched environment. The nickname reflects the country's temperate
-        climate,
-        numerous lakes and rivers, and its position as a tourist destination with uncrowded, natural surroundings,
-        making it an "air-conditioned state". It is rich in wildlife, culture, and stunning natural landscapes.
-      </p>
-      <img src="images/zambia-about.webp" alt="Victoria Falls landscape" />
+    <!-- Landmarks Section -->
+    <section class="landmarks">
+      <h2>Famous Landmarks</h2>
+      <ul>
+        <li>Victoria Falls – One of the seven natural wonders of the world</li>
+        <li>South Luangwa National Park – Home to diverse wildlife</li>
+        <li>Lake Kariba – One of the world’s largest man-made lakes</li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Zambia Page</p>
-    <p>Last Modified: <span id="lastModified"></span></p>
+    <p>&copy; 2025 Discover Zambia | WDD 131 | Daniel Mukonda</p>
   </footer>
 </body>
 
