@@ -1,182 +1,139 @@
-/* ================================
-   Global Reset & Variables
-================================ */
-* {
+/* ========== Global Variables ========== */
+:root {
+  --primary-color: #006b3c; /* Zambia green */
+  --accent-color: #ff0000;  /* Zambia red */
+  --text-color: #333;
+  --bg-light: #f5f5f5;
+  --font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ========== Base Styles ========== */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --primary-color: #006d77;
-  --secondary-color: #83c5be;
-  --accent-color: #edf6f9;
-  --heading-font: 'Roboto', sans-serif;
-  --body-font: 'Roboto', sans-serif;
-}
-
-/* ================================
-   Base Styles
-================================ */
-body {
-  font-family: var(--body-font);
-  color: #333;
-  background-color: var(--accent-color);
+  font-family: var(--font-family);
+  background-color: var(--bg-light);
+  color: var(--text-color);
   line-height: 1.6;
 }
 
-header,
-main,
-footer {
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-/* ================================
-   Header & Navigation
-================================ */
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+h1, h2 {
+  font-weight: 600;
+  color: var(--primary-color);
   text-align: center;
 }
 
-header h1 {
-  font-family: var(--heading-font);
-  font-size: 2rem;
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
+/* ========== Header ========== */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
+nav {
+  margin-top: 0.5rem;
 }
 
 nav a {
+  color: white;
   text-decoration: none;
-  color: var(--primary-color);
-  font-weight: 700;
-  transition: color 0.3s;
+  margin: 0 1rem;
+  font-weight: bold;
 }
 
 nav a:hover {
-  color: var(--secondary-color);
+  text-decoration: underline;
 }
 
-/* ================================
-   Hero Section
-================================ */
+/* ========== Hero Section ========== */
+.hero {
+  position: relative;
+  text-align: center;
+}
+
 .hero img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px;
-  margin: 1rem 0;
 }
 
-/* ================================
-   About Section
-================================ */
-.about {
-  background: #fff;
+/* ========== Data & Weather Overlays ========== */
+.data,
+.weather {
+  position: absolute;
+  top: 20%;
+  background: rgba(255, 255, 255, 0.85);
   padding: 1rem;
   border-radius: 8px;
-  margin-bottom: 1.5rem;
+  width: 220px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.about h2 {
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
+.data {
+  left: 5%;
+}
+
+.weather {
+  right: 5%;
+}
+
+.data h2,
+.weather h2 {
+  margin-top: 0;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Weather icon for wide view */
+.weather h2::after {
+  content: " ⛅";
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+/* ========== About Section ========== */
+.about {
+  padding: 2rem;
+  text-align: center;
 }
 
 .about img {
-  float: right;
-  width: 200px;
-  margin: 0 0 1rem 1rem;
-  border-radius: 8px;
-}
-
-/* ================================
-   Weather Section
-================================ */
-.weather {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-}
-
-.weather h2 {
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.weather-info {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.weather-info img {
-  width: 50px;
-  height: 50px;
-}
-
-/* ================================
-   Landmarks Section
-================================ */
-.landmarks {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-}
-
-.landmarks h2 {
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.landmarks ul {
-  list-style: disc inside;
-}
-
-/* ================================
-   Footer
-================================ */
-footer {
-  text-align: center;
-  padding: 1rem 0;
-  border-top: 2px solid var(--secondary-color);
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
   margin-top: 1rem;
-  font-size: 0.9rem;
-  color: var(--primary-color);
 }
 
-/* ================================
-   Responsive Design
-================================ */
+/* ========== Footer ========== */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* ========== Responsive Design ========== */
 @media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .about img {
-    float: none;
-    display: block;
+  .data,
+  .weather {
+    position: static;
+    width: 90%;
     margin: 1rem auto;
-    width: 100%;
-    max-width: 300px;
   }
 
-  .weather-info {
-    flex-direction: column;
-    text-align: center;
+  .hero {
+    padding-bottom: 2rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
   }
 }
