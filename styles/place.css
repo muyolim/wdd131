@@ -1,7 +1,7 @@
 /* ========== Global Variables ========== */
 :root {
-  --primary-color: #006b3c; /* Zambia green */
-  --accent-color: #ff0000;  /* Zambia red */
+  --primary-color: #006b3c;
+  --accent-color: #ff0000;
   --text-color: #333;
   --bg-light: #f5f5f5;
   --font-family: 'Segoe UI', Arial, sans-serif;
@@ -17,7 +17,8 @@ body {
   line-height: 1.6;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: 600;
   color: var(--primary-color);
   text-align: center;
@@ -89,13 +90,6 @@ nav a:hover {
   font-size: 1rem;
 }
 
-/* Weather icon for wide view */
-.weather h2::after {
-  content: " ⛅";
-  font-size: 1.2rem;
-  margin-left: 0.5rem;
-}
-
 /* ========== About Section ========== */
 .about {
   padding: 2rem;
@@ -121,6 +115,7 @@ footer {
 
 /* ========== Responsive Design ========== */
 @media (max-width: 600px) {
+
   .data,
   .weather {
     position: static;
@@ -135,5 +130,36 @@ footer {
   nav a {
     display: block;
     margin: 0.5rem 0;
+  }
+}
+
+/* ===== Fix Weather SVG (Mobile Only) ===== */
+.weather img {
+  display: none;
+  /* hide by default */
+}
+
+@media (max-width: 600px) {
+  .weather img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* ===== Fix Pseudo-Element Emoticon ===== */
+/* Wide screens: show emoticon */
+@media (min-width: 601px) {
+  .weather h2::after {
+    content: " ⛅";
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+  }
+}
+
+/* Small screens: hide emoticon */
+@media (max-width: 600px) {
+  .weather h2::after {
+    content: "";
   }
 }
