@@ -1,4 +1,5 @@
 console.log("JS file loaded");
+
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -71,7 +72,6 @@ const temples = [
     imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-43596-thumb.jpg"
   }
 ];
-console.log("Temple count:", temples.length);
 
 const container = document.getElementById("temple-container");
 const heading = document.getElementById("filter-heading");
@@ -94,6 +94,7 @@ function displayTemples(list) {
 
 function filterTemples(criteria) {
   let filtered = temples;
+
   switch (criteria) {
     case "old":
       filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
@@ -111,13 +112,17 @@ function filterTemples(criteria) {
       filtered = temples.filter(t => t.area < 10000);
       heading.textContent = "Small Temples";
       break;
+    case "home":
     default:
+      filtered = temples;
       heading.textContent = "All Temples";
+      break;
   }
+
   displayTemples(filtered);
 }
 
-// Event listeners for buttons
+// Event listeners for anchor-based nav
 document.getElementById("home").addEventListener("click", () => filterTemples("home"));
 document.getElementById("old").addEventListener("click", () => filterTemples("old"));
 document.getElementById("new").addEventListener("click", () => filterTemples("new"));
